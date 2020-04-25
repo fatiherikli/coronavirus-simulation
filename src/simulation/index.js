@@ -11,32 +11,11 @@ const VENUES = [
     members: simulationState => simulationState.agentsPerHouse,
     isRoot: true,
     count: simulationState => simulationState.houses,
-  },
-  {
-    name: 'temple',
-    count: simulationState => simulationState.temples,
-  },
-  {
-    name: 'hospital',
-    count: simulationState => simulationState.hospitals,
-  },
-  {
-    name: 'supermarket',
-    count: simulationState => simulationState.supermarkets,
-  },
-  {
-    name: 'station',
-    count: simulationState => simulationState.busStations,
-  },
+  }
 ];
 
 const VENUE_TRANSITIONS = {
-  'house': ['supermarket', 'station', 'hospital', 'house', 'house', 'house',
-            'house', 'house', 'house', 'house', 'house'],
-  'supermarket': ['base', 'base', 'base', 'supermarket'],
-  'hospital': ['hospital', 'base', 'base', 'base'],
-  'station': ['supermarket', 'base', 'base', 'base', 'temple'],
-  'temple': ['supermarket', 'base', 'base', 'base'],
+  'house': ['house', 'house', 'house', 'house', 'house', 'house', 'house', 'house']
 };
 
 function getInitialGraph(simulationState) {

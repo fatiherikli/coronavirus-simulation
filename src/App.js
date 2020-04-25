@@ -12,10 +12,6 @@ const INITIAL_SIMULATION_STATE = {
   tick: 0,
   agentsPerHouse: 9,
   houses: 42,
-  busStations: 1,
-  hospitals: 1,
-  supermarkets: 3,
-  temples: 1,
   initialSickAgents: 1,
 };
 
