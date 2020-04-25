@@ -7,19 +7,6 @@ export function applyFixedNodeGrid(nodes, height=600) {
   const nodesToAlign = nodes.filter(({ type }) => type === 'venue');
   const count = nodesToAlign.length;
   
-  for (var i = 0; i < count; i++) {
-    const node = nodesToAlign[i];
-
-    const row = Math.floor(i / (height / gridSize)) + 1;
-    const col = Math.floor(i % ((height) / gridSize)) + 1;
-    
-    const fx = row * gridSize;
-    const fy = col * gridSize;
-
-    node.fx = fx;
-    node.fy = fy;
-  }
-
   fetch('https://raw.githubusercontent.com/eusim/coronavirus-simulation/master/data/country_centroids_az8.json')
   .then((response) => {
     return response.json();
@@ -27,10 +14,17 @@ export function applyFixedNodeGrid(nodes, height=600) {
   .then((data) => {
     console.log(JSON.stringify(data));
 
-    for (i = 0; i < data.features.length; i++){
-      if (data.features[i].properties.region_un == 'Europe' &&
-        (data.features[i].properties.type == 'Country' || true)) {
-        console.log(data.features[i].properties.admin)
+    var venue = 0;
+    for (var i = 0; (i < data.features.length && venue < count); i++){
+      if (data.features[i].properties.region_un === 'Europe' &&
+        (data.features[i].properties.type === 'Country' || data.features[i].properties.type === 'Sovereign country')) {
+        console.log(data.features[i].properties.admin);
+        const node = nodesToAlign[venue];
+
+        node.fx = data.features[i].geometry.coordinates[0]*25;
+        node.fy = data.features[i].geometry.coordinates[1]*7;
+
+        venue++;
       }
     }
   });
