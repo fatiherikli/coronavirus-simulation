@@ -8,6 +8,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "classnames": "^2.2.6",
+    "country-code-emoji": "^1.0.0",
     "d3-force": "^2.0.1",
     "keymirror": "^0.1.1",
     "randomgraph": "^0.1.3",
