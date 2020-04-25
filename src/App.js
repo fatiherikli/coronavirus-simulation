@@ -15,6 +15,7 @@ const INITIAL_SIMULATION_STATE = {
   initialSickAgents: 1,
 };
 
+// Setup initial graph containing venues and agents
 const INITIAL_GRAPH = getInitialGraph(INITIAL_SIMULATION_STATE);
 
 function App() {
@@ -43,6 +44,7 @@ function App() {
 
     setSimulationState(state);
 
+    // Setup for graph in the bottom right
     setHistoricalSickCount(
       historicalSickCount.concat(
         nodes.filter(({ state }) => state === SICK).length
@@ -66,6 +68,8 @@ function App() {
     setLoading(false);
   }, [loading]);
 
+
+  // Quarantine
   const onNodeClick = (nodeId) => {
     return () => {
       const node = nodes.find(({ id }) => nodeId === id);
