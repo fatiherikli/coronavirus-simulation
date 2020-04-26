@@ -11,7 +11,7 @@ export default function SimulationSettings({
     <div className={ styles.container }>
       <div className={ styles.form }>
       <label>
-        Initial sick agents<br />
+        Initial sick inhabitants<br />
         <input
           type={ 'range' }
           onChange={ onSettingChange('initialSickAgents') }
