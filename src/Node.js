@@ -10,7 +10,6 @@ import flag from 'country-code-emoji';
 function noop() {}
 
 const ICONS = {
-  house: "🏠",
   "AL": flag("AL"),
   "AX": flag("AX"),
   "AD": flag("AD"),
