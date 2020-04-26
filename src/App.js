@@ -173,16 +173,10 @@ function App() {
         <div className={styles.section}>
           <h1>What is this?</h1>
           <p>
-            Imagine you are ruling over the European Union and can also influence how a sickness like COVID-19 behaves in a population like the European Union. What would you do if you were chief of the EU? Would you lock it down? Would you set out laws to make people wear masks? Explore yourself by changing the sliders above and watch how the sickness spreads over time.
+            Imagine you are ruling over the European Union and can also influence how a sickness like COVID-19 behaves in a population like the European Union. What would you do if you were chief of the EU? Would you lock it down? Would you set out laws to make people wear masks? Explore your ability to manage the EU by changing the sliders above and watch how the sickness spreads over time. 😊
           </p>
           <p>
             This is a direct result of the euvsvirus.org Hackathon 2020 based on this whitepaper: <a href="https://devpost.com/software/political-policies-effect-on-covid-19-spread-inside-the-eu-uamhdv">Political policies effect on COVID-19 spread inside the EU</a>
-          </p>
-          <p>
-            In the model, we have three different states of each EU citizen. The first state is
-            <i> SUSCEPTIBLE</i>, second one is <i> SICK</i>, and the last one is
-            <i> RECOVERED</i>. We have also a <i> DEAD</i> state in this
-            simulation, because unfortunately some people die because of COVID-19.
           </p>
           <h1>How does it work?</h1>
           <p>
@@ -191,13 +185,16 @@ function App() {
             rest of the population and the other citizen get sick as well based on the "basic reproduction number". After the infection, the now `SICK` citizen switch into a recovered or a dead state based on some probabilistic values.
           </p>
           <p>
-            The probabilistic values are defined in a markov-chain concept.
-            Markov chain is a stochastic model to describe a sequence of
-            possible events that can occur in the future.
+            In the model, we have four different states of each EU citizen. The first state is
+            <i> SUSCEPTIBLE</i>, second one is <i> SICK</i>, and the last one is
+            <i> RECOVERED</i>. We have also a <i> DEAD</i> state in this
+            simulation, because unfortunately some people die because of COVID-19.
           </p>
-          <h1>How does a probabilistic model look like?</h1>
           <p>
-            We're using a markov graph to define a probabilistic transition. We
+            The probabilistic values are defined in a Markov-chain concept called Markov graph. Markov chain is a stochastic model to describe a sequence of possible events that can occur in the future.
+          </p>
+          <p>
+            We're using a Markov graph to define a probabilistic transition. We
             can simply say that markov chain is a graph of all the possible
             state transitions of an individual node.
           </p>
