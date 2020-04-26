@@ -12,7 +12,7 @@ const INITIAL_SIMULATION_STATE = {
   tick: 0,
   agentsPerHouse: 9,
   houses: 48,
-  initialSickAgents: 1,
+  initialSickAgents: 5,
   closedBorders: 2,
   maskWearPercentage: 0
 };
