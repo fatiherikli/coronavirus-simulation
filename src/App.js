@@ -106,6 +106,7 @@ function App() {
           <span className={styles.sampleSusceptible}>Susceptible</span>
           <span className={styles.sampleInfected}>Infected</span>
           <span className={styles.sampleRecovered}>Recovered</span>
+          <span className={styles.sampleDead}>Deceased</span>
           <i>Click on a country to lock it down (quarantine)</i>
         </div>
         {!loading && (
