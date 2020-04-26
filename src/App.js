@@ -6,7 +6,7 @@ import LineChart from "./LineChart";
 import SimulationSettings from "./SimulationSettings";
 import { SICK, RECOVERED, DEAD } from "./constants";
 import { useInterval, randomChoice } from "./utils";
-import { nextSimulationTick, getInitialGraph } from "./simulation";
+import { nextSimulationTick, getInitialGraph, setMarkovChain } from "./simulation";
 
 const INITIAL_SIMULATION_STATE = {
   tick: 0,

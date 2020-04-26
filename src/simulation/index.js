@@ -1,8 +1,8 @@
 import { randomSample, distance } from '../utils';
 
-import { AGENT, SUSCEPTIBLE, SICK, DEAD } from '../constants';
+import { AGENT, SUSCEPTIBLE, SICK, RECOVERED, DEAD } from '../constants';
 
-import { getNextMarkovStateForAgent, STAY, BASE, applySIRModel } from './markov';
+import { getNextMarkovStateForAgent, STAY, BASE, applySIRModel, DISEASE_SPREAD_TRANSITION } from './markov';
 import { applyFixedNodeGrid } from './grid';
 
 const VENUES = [
@@ -192,7 +192,7 @@ function nextSimulationTick(state, nodes, edges) {
     );
 
 
-  nodes = applySIRModel(nodes, edges);
+  nodes = applySIRModel(state, nodes, edges);
 
   return {
     nodes: nodes,
@@ -235,5 +235,5 @@ export {
   HALF_ASSED_VENUE_TRANSITIONS,
   REGULAR_VENUE_TRANSITIONS,
   getInitialGraph,
-  nextSimulationTick,
+  nextSimulationTick
 };

@@ -46,9 +46,9 @@ export default function SimulationSettings({
           type={ 'range' }
           onChange={ onSettingChange('maskWearPercentage') }
           value={ simulationState.maskWearPercentage }
-          min={ 1 }
+          min={ 0 }
           max={ 100 }
-        /> <span className={ styles.value }>{ simulationState.maskWearPercentage } %</span>
+        /> <span className={ styles.value }>{ simulationState.maskWearPercentage } %</span><br /><i>this one works in realtime</i>
       </label>
       </div>
 

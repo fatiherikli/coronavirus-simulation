@@ -24,6 +24,7 @@ const SIR_TRANSITION_STATE = {
   ],
 };
 
+// TODO: This is the transition. It is inhabited by masks
 const DISEASE_SPREAD_TRANSITION = {
   [SUSCEPTIBLE]: [
     [0.3, SICK],
@@ -53,7 +54,7 @@ export function getNextMarkovStateForAgent(agent, transitionMap) {
   return randomChoice(map);
 }
 
-export function applySIRModel(nodes, edges) {
+export function applySIRModel(state, nodes, edges) {
   for (const node of nodes) {
     if (node.type !== 'agent') {
       continue;
@@ -71,7 +72,32 @@ export function applySIRModel(nodes, edges) {
         }
 
         if (node.state === SICK) {
-          fellow.state = weightedRandom(DISEASE_SPREAD_TRANSITION[fellow.state]);
+          // If the agent wears a mask we suppress the transition of the sickness.
+          // According to Davies et al., (2013) Disaster medicine and Public Health Preparedness
+          // Surgical Masks have a 97% effectiveness against 1-micron particles.
+          if (state.maskWearPercentage > 0 && DISEASE_SPREAD_TRANSITION[fellow.state][0][0] === 0.3) {
+
+            var sick_prob = 0.3 * (1 - state.maskWearPercentage/103);
+            var MASK_MODIFIED_TRANSITION = {
+              [SUSCEPTIBLE]: [
+                [sick_prob, SICK],
+                [1 - sick_prob, SUSCEPTIBLE],
+              ],
+              [RECOVERED]: [
+                [1, RECOVERED],
+              ],
+              [SICK]: [
+                [1, SICK],
+              ],
+              [DEAD]: [
+                [1, DEAD],
+              ],
+            };
+            console.log("susceptible ones")
+            fellow.state = weightedRandom(MASK_MODIFIED_TRANSITION[fellow.state]);
+          } else {
+            fellow.state = weightedRandom(DISEASE_SPREAD_TRANSITION[fellow.state]);
+          }
         }
 
         fellow.state = weightedRandom(SIR_TRANSITION_STATE[fellow.state]);

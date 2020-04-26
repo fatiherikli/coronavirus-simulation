@@ -1,6 +1,10 @@
 import { COLORS as colors } from './constants';
 import React, { useState, useEffect, useRef } from 'react';
 
+import {
+  SUSCEPTIBLE, SICK, RECOVERED, DEAD,
+} from './constants';
+
 export function useInterval(callback, delay) {
   // https://overreacted.io/making-setinterval-declarative-with-react-hooks/
   // danke, dan
