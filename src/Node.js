@@ -5,15 +5,64 @@ import styles from "./Graph.module.css";
 import { padding, shade } from "./utils";
 import { VENUE, SUSCEPTIBLE, SICK, RECOVERED, DEAD } from "./constants";
 
+import flag from 'country-code-emoji';
+
 function noop() {}
 
 const ICONS = {
   house: "🏠",
-  hospital: "🏥",
-  temple: "🕍",
-  station: "🚌",
-  supermarket: "🛒"
+  "AL": flag("AL"),
+  "AX": flag("AX"),
+  "AD": flag("AD"),
+  "AT": flag("AT"),
+  "BE": flag("BE"),
+  "BG": flag("BG"),
+  "BA": flag("BA"),
+  "BY": flag("BY"),
+  "CH": flag("CH"),
+  "CZ": flag("CZ"),
+  "DE": flag("DE"),
+  "DK": flag("DK"),
+  "ES": flag("ES"),
+  "EE": flag("EE"),
+  "FI": flag("FI"),
+  "FR": flag("FR"),
+  "GB": flag("GB"),
+  "GG": flag("GG"),
+  "GR": flag("GR"),
+  "HR": flag("HR"),
+  "HU": flag("HU"),
+  "IM": flag("IM"),
+  "IE": flag("IE"),
+  "IS": flag("IS"),
+  "IT": flag("IT"),
+  "JE": flag("JE"),
+  "XK": flag("XK"), // Kosovo we feel your pain, too.
+  "LI": flag("LI"),
+  "LT": flag("LT"),
+  "LU": flag("LU"),
+  "LV": flag("LV"),
+  "MC": flag("MC"),
+  "MD": flag("MD"),
+  "MK": flag("MK"),
+  "MT": flag("MT"),
+  "ME": flag("ME"),
+  "NL": flag("NL"),
+  "NO": flag("NO"),
+  "PL": flag("PL"),
+  "PT": flag("PT"),
+  "RO": flag("RO"),
+  "SM": flag("SM"),
+  "RS": flag("RS"),
+  "SK": flag("SK"),
+  "SI": flag("SI"),
+  "SE": flag("SE"),
+  "UA": flag("UA"),
+  "VA": flag("VA"),
 };
+
+// TODO: Elegant solution for this one?
+//const ICONS = ['AL', 'NL', 'GB'].forEach(x => x, flag(x));
 
 export default function Node({
   layout,
