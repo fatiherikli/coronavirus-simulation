@@ -14,6 +14,7 @@ const INITIAL_SIMULATION_STATE = {
   houses: 48,
   initialSickAgents: 1,
   closedBorders: 2,
+  maskWearPercentage: 0
 };
 
 // Setup initial graph containing venues and agents

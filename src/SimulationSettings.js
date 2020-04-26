@@ -44,11 +44,11 @@ export default function SimulationSettings({
         What percentage of citizens wears masks <br />
         <input
           type={ 'range' }
-          onChange={ onSettingChange('masksWearPercentage') }
-          value={ simulationState.masksWearPercentage }
+          onChange={ onSettingChange('maskWearPercentage') }
+          value={ simulationState.maskWearPercentage }
           min={ 1 }
           max={ 100 }
-        /> <span className={ styles.value }>{ simulationState.agentsPerHouse } percent</span>
+        /> <span className={ styles.value }>{ simulationState.maskWearPercentage } %</span>
       </label>
       </div>
 
