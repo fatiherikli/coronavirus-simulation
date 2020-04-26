@@ -151,7 +151,7 @@ function App() {
         <div className={styles.simulationSettings}>
           <h3>Settings</h3>
           <div className={styles.simulationInfo}>
-            Click on a building on the map to make it quarantined.
+            Click on a country on the map to make it quarantined.
           </div>
           <SimulationSettings
             simulationState={simulationState}
