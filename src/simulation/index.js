@@ -14,61 +14,88 @@ const VENUES = [
   }
 ];
 
-const VENUE_TRANSITIONS = {
-   'house': [BASE, BASE, BASE, 'NL', BASE, BASE, BASE, BASE,
-BASE, BASE, BASE, "AL", BASE, BASE, BASE,
-BASE, BASE, BASE, "AX", BASE, BASE, BASE,
-BASE, BASE, BASE, "AD", BASE, BASE, BASE,
-BASE, BASE, BASE, "AT", BASE, BASE, BASE,
-BASE, BASE, BASE, "BE", BASE, BASE, BASE,
-BASE, BASE, BASE, "BG", BASE, BASE, BASE,
-BASE, BASE, BASE, "BA", BASE, BASE, BASE,
-BASE, BASE, BASE, "BY", BASE, BASE, BASE,
-BASE, BASE, BASE, "CH", BASE, BASE, BASE,
-BASE, BASE, BASE, "CZ", BASE, BASE, BASE,
-BASE, BASE, BASE, "DE", BASE, BASE, BASE,
-BASE, BASE, BASE, "DK", BASE, BASE, BASE,
-BASE, BASE, BASE, "ES", BASE, BASE, BASE,
-BASE, BASE, BASE, "EE", BASE, BASE, BASE,
-BASE, BASE, BASE, "FI", BASE, BASE, BASE,
-BASE, BASE, BASE, "FR", BASE, BASE, BASE,
-BASE, BASE, BASE, "GB", BASE, BASE, BASE,
-BASE, BASE, BASE, "GG", BASE, BASE, BASE,
-BASE, BASE, BASE, "GR", BASE, BASE, BASE,
-BASE, BASE, BASE, "HR", BASE, BASE, BASE,
-BASE, BASE, BASE, "HU", BASE, BASE, BASE,
-BASE, BASE, BASE, "IM", BASE, BASE, BASE,
-BASE, BASE, BASE, "IE", BASE, BASE, BASE,
-BASE, BASE, BASE, "IS", BASE, BASE, BASE,
-BASE, BASE, BASE, "IT", BASE, BASE, BASE,
-BASE, BASE, BASE, "JE", BASE, BASE, BASE,
-BASE, BASE, BASE, "XK", BASE, BASE, BASE,
-BASE, BASE, BASE, "LI", BASE, BASE, BASE,
-BASE, BASE, BASE, "LT", BASE, BASE, BASE,
-BASE, BASE, BASE, "LU", BASE, BASE, BASE,
-BASE, BASE, BASE, "LV", BASE, BASE, BASE,
-BASE, BASE, BASE, "MC", BASE, BASE, BASE,
-BASE, BASE, BASE, "MD", BASE, BASE, BASE,
-BASE, BASE, BASE, "MK", BASE, BASE, BASE,
-BASE, BASE, BASE, "MT", BASE, BASE, BASE,
-BASE, BASE, BASE, "ME", BASE, BASE, BASE,
-BASE, BASE, BASE, "NL", BASE, BASE, BASE,
-BASE, BASE, BASE, "NO", BASE, BASE, BASE,
-BASE, BASE, BASE, "PL", BASE, BASE, BASE,
-BASE, BASE, BASE, "PT", BASE, BASE, BASE,
-BASE, BASE, BASE, "RO", BASE, BASE, BASE,
-BASE, BASE, BASE, "SM", BASE, BASE, BASE,
-BASE, BASE, BASE, "RS", BASE, BASE, BASE,
-BASE, BASE, BASE, "SK", BASE, BASE, BASE,
-BASE, BASE, BASE, "SI", BASE, BASE, BASE,
-BASE, BASE, BASE, "SE", BASE, BASE, BASE,
-BASE, BASE, BASE, "UA", BASE, BASE, BASE,
-BASE, BASE, BASE, "VA", BASE, BASE, BASE]
+const REGULAR_VENUE_TRANSITIONS = {
+  'house': [BASE, BASE, BASE, 'NL', BASE, BASE, BASE, BASE,
+    BASE, BASE, BASE, "AL", BASE, BASE, BASE,
+    BASE, BASE, BASE, "AX", BASE, BASE, BASE,
+    BASE, BASE, BASE, "AD", BASE, BASE, BASE,
+    BASE, BASE, BASE, "AT", BASE, BASE, BASE,
+    BASE, BASE, BASE, "BE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "BG", BASE, BASE, BASE,
+    BASE, BASE, BASE, "BA", BASE, BASE, BASE,
+    BASE, BASE, BASE, "BY", BASE, BASE, BASE,
+    BASE, BASE, BASE, "CH", BASE, BASE, BASE,
+    BASE, BASE, BASE, "CZ", BASE, BASE, BASE,
+    BASE, BASE, BASE, "DE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "DK", BASE, BASE, BASE,
+    BASE, BASE, BASE, "ES", BASE, BASE, BASE,
+    BASE, BASE, BASE, "EE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "FI", BASE, BASE, BASE,
+    BASE, BASE, BASE, "FR", BASE, BASE, BASE,
+    BASE, BASE, BASE, "GB", BASE, BASE, BASE,
+    BASE, BASE, BASE, "GG", BASE, BASE, BASE,
+    BASE, BASE, BASE, "GR", BASE, BASE, BASE,
+    BASE, BASE, BASE, "HR", BASE, BASE, BASE,
+    BASE, BASE, BASE, "HU", BASE, BASE, BASE,
+    BASE, BASE, BASE, "IM", BASE, BASE, BASE,
+    BASE, BASE, BASE, "IE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "IS", BASE, BASE, BASE,
+    BASE, BASE, BASE, "IT", BASE, BASE, BASE,
+    BASE, BASE, BASE, "JE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "XK", BASE, BASE, BASE,
+    BASE, BASE, BASE, "LI", BASE, BASE, BASE,
+    BASE, BASE, BASE, "LT", BASE, BASE, BASE,
+    BASE, BASE, BASE, "LU", BASE, BASE, BASE,
+    BASE, BASE, BASE, "LV", BASE, BASE, BASE,
+    BASE, BASE, BASE, "MC", BASE, BASE, BASE,
+    BASE, BASE, BASE, "MD", BASE, BASE, BASE,
+    BASE, BASE, BASE, "MK", BASE, BASE, BASE,
+    BASE, BASE, BASE, "MT", BASE, BASE, BASE,
+    BASE, BASE, BASE, "ME", BASE, BASE, BASE,
+    BASE, BASE, BASE, "NL", BASE, BASE, BASE,
+    BASE, BASE, BASE, "NO", BASE, BASE, BASE,
+    BASE, BASE, BASE, "PL", BASE, BASE, BASE,
+    BASE, BASE, BASE, "PT", BASE, BASE, BASE,
+    BASE, BASE, BASE, "RO", BASE, BASE, BASE,
+    BASE, BASE, BASE, "SM", BASE, BASE, BASE,
+    BASE, BASE, BASE, "RS", BASE, BASE, BASE,
+    BASE, BASE, BASE, "SK", BASE, BASE, BASE,
+    BASE, BASE, BASE, "SI", BASE, BASE, BASE,
+    BASE, BASE, BASE, "SE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "UA", BASE, BASE, BASE,
+    BASE, BASE, BASE, "VA", BASE, BASE, BASE]
 };
+
+const HALF_ASSED_VENUE_TRANSITIONS = {
+  'house': [BASE, BASE, BASE, 'NL', BASE, BASE, BASE, BASE,
+    BASE, BASE, BASE, "BE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "DE", BASE, BASE, BASE,
+    BASE, BASE, BASE, "FR", BASE, BASE, BASE,
+    BASE, BASE, BASE, "GB", BASE, BASE, BASE,
+    BASE, BASE, BASE, "IT", BASE, BASE, BASE,
+    BASE, BASE, BASE, "PL", BASE, BASE, BASE,
+    BASE, BASE, BASE, "RO", BASE, BASE, BASE,
+    BASE, BASE, BASE, "SE", BASE, BASE, BASE]
+};
+
+const CLOSED_BORDER_VENUE_TRANSITIONS = {
+  'house': [BASE]
+};
+
+var VENUE_TRANSITIONS = REGULAR_VENUE_TRANSITIONS;
 
 function getInitialGraph(simulationState) {
   const nodes = [];
   const edges = [];
+
+  if (simulationState.closedBorders == 2) {
+    VENUE_TRANSITIONS = REGULAR_VENUE_TRANSITIONS;
+  } else if (simulationState.closedBorders == 1) {
+    VENUE_TRANSITIONS = HALF_ASSED_VENUE_TRANSITIONS;
+  } else {
+
+    VENUE_TRANSITIONS = CLOSED_BORDER_VENUE_TRANSITIONS;
+  }
 
   VENUES.forEach(({
     name,
@@ -133,6 +160,7 @@ function nextSimulationTick(state, nodes, edges) {
     )
     .forEach(
       (agent, i) => {
+
         const nextMarkovState = getNextMarkovStateForAgent(agent, VENUE_TRANSITIONS);
         const [agentLocation] = agent.location.split('-')
 
@@ -169,7 +197,7 @@ function nextSimulationTick(state, nodes, edges) {
   return {
     nodes: nodes,
     edges: edges,
-    state: { ...state, tick: state.tick + 1},
+    state: { ...state, tick: state.tick + 1 },
   }
 }
 
@@ -190,16 +218,22 @@ function moveAgent(nodes, edges, agent, targetNode) {
 }
 
 function findClosestNode(source, targets) {
-  const closest = targets.reduce(
-    (prev, current) => distance(source, current) < distance(source, prev) ? current : prev
-  );
+  if (targets) {
+    const closest = targets.reduce(
+      (prev, current) => distance(source, current) < distance(source, prev) ? current : prev
+    );
+    return closest;
+  } else {
+    return source;
+  }
 
-  return closest;
 }
 
 export {
   VENUES,
   VENUE_TRANSITIONS,
+  HALF_ASSED_VENUE_TRANSITIONS,
+  REGULAR_VENUE_TRANSITIONS,
   getInitialGraph,
   nextSimulationTick,
 };
