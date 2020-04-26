@@ -21,7 +21,7 @@ export default function SimulationSettings({
         /> <span className={ styles.value }>{ simulationState.initialSickAgents }</span>
       </label>
       <label>
-        Agents per building <br />
+        Inhabitants per country <br />
         <input
           type={ 'range' }
           onChange={ onSettingChange('agentsPerHouse') }

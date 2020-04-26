@@ -99,15 +99,15 @@ function App() {
     <div className={styles.container}>
       <div className={styles.header}>
         <a href="/" style={{ color: 'gray', textDecoration: 'none' }}>↵ Other simulations</a>
-        <h3>Simulating coronavirus with the SIR model</h3>
-        <h2>An experiment to analyse how a virus spread over a community</h2>
+        <h3>What happens in Europe if we ... ?</h3>
+        <h2>An experiment to analyse how a virus spreads over Europe</h2>
       </div>
       <div className={styles.simulation}>
         <div className={styles.samples}>
           <span className={styles.sampleSusceptible}>Susceptible</span>
           <span className={styles.sampleInfected}>Infected</span>
           <span className={styles.sampleRecovered}>Recovered</span>
-          <i>Click on a building to lock it (quarantine)</i>
+          <i>Click on a country to lock it down (quarantine)</i>
         </div>
         {!loading && (
           <Graph
