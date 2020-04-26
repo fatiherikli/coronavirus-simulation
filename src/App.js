@@ -12,7 +12,7 @@ const INITIAL_SIMULATION_STATE = {
   tick: 0,
   agentsPerHouse: 9,
   houses: 42,
-  initialSickAgents: 1,
+  initialSickAgents: 4,
 };
 
 // Setup initial graph containing venues and agents
