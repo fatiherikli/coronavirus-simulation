@@ -207,8 +207,8 @@ function App() {
           </p>
           <p>
             Created by<br />
-            <a href="https://twitter.com/fthrkl">Fatih Erikli</a>'s
-            <a href="https://twitter.com/michel_mke">Michel Make</a>
+            <a href="https://twitter.com/fthrkl">Fatih Erikli</a><br />
+            <a href="https://twitter.com/michel_mke">Michel Make</a><br />
             <a href="https://twitter.com/rscircus">Roland Siegbert</a>
           </p>
           <p style={{ marginBottom: "4em" }}>
