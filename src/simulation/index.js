@@ -15,7 +15,7 @@ const VENUES = [
 ];
 
 const VENUE_TRANSITIONS = {
-  'house': ['house', 'house', 'house', 'house', 'house', 'house', 'house', 'house']
+  'house': [BASE, BASE, BASE, 'NL', BASE, BASE, BASE, BASE],
 };
 
 function getInitialGraph(simulationState) {
