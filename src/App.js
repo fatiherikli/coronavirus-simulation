@@ -98,7 +98,6 @@ function App() {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <a href="/" style={{ color: 'gray', textDecoration: 'none' }}>↵ Other simulations</a>
         <h3>What happens in Europe if we ... ?</h3>
         <h2>An experiment to analyse how a virus spreads over Europe</h2>
       </div>
