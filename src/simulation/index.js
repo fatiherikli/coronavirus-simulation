@@ -218,16 +218,22 @@ function moveAgent(nodes, edges, agent, targetNode) {
 }
 
 function findClosestNode(source, targets) {
-  const closest = targets.reduce(
-    (prev, current) => distance(source, current) < distance(source, prev) ? current : prev
-  );
+  if (targets) {
+    const closest = targets.reduce(
+      (prev, current) => distance(source, current) < distance(source, prev) ? current : prev
+    );
+    return closest;
+  } else {
+    return source;
+  }
 
-  return closest;
 }
 
 export {
   VENUES,
   VENUE_TRANSITIONS,
+  HALF_ASSED_VENUE_TRANSITIONS,
+  REGULAR_VENUE_TRANSITIONS,
   getInitialGraph,
   nextSimulationTick,
 };
