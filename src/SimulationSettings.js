@@ -30,6 +30,26 @@ export default function SimulationSettings({
           max={ 10 }
         /> <span className={ styles.value }>{ simulationState.agentsPerHouse }</span>
       </label>
+      <label>
+        Are the borders closed? <br />
+        <input
+            type={'range'}
+            onChange={onSettingChange('closedBorders')}
+            value={simulationState.closedBorders}
+            min={0}
+            max={2}
+          /><br /> 0: closed, 1: some open<br />2: all open
+      </label>
+      <label>
+        What percentage of citizens wears masks <br />
+        <input
+          type={ 'range' }
+          onChange={ onSettingChange('maskWearPercentage') }
+          value={ simulationState.maskWearPercentage }
+          min={ 1 }
+          max={ 100 }
+        /> <span className={ styles.value }>{ simulationState.maskWearPercentage } %</span>
+      </label>
       </div>
 
       <div className={ styles.footer }>

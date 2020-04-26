@@ -1,43 +1,51 @@
 .container label {
-  display: block;
-  padding-bottom: 1em;
-  width: 50%;
-  float: left;
+    display: block;
+    padding-bottom: 1em;
+    width: 50%;
+    float: left;
 }
 
 .form {
-  overflow: hidden;
-  margin-top: 1.5em;
+    overflow: hidden;
+    margin-top: 1.5em;
 }
 
 .value {
-  position: absolute;
-  color: gray;
-  margin-left: 0.2em;
-  margin-top: -0.1em;
-  font-size: 1.2em;
+    position: absolute;
+    color: gray;
+    margin-left: 0.2em;
+    margin-top: -0.1em;
+    font-size: 1.2em;
+}
+
+.text {
+    position: absolute;
+    color: gray;
+    margin-left: 0.2em;
+    margin-top: 0.1em;
+    font-size: 1.2em;
 }
 
 .footer {
-  margin-top: 1em;
+    margin-top: 1em;
 }
 
 .footer button {
-  padding: 0.4em 1em;
-  background: #dedede;
-  border: darkgray 3px solid;
-  /*border-radius: 0.3em;*/
-  color: black;
-  cursor: pointer;
-  font-size: 1em;
-  font-family: inherit;
+    padding: 0.4em 1em;
+    background: #dedede;
+    border: darkgray 3px solid;
+    /*border-radius: 0.3em;*/
+    color: black;
+    cursor: pointer;
+    font-size: 1em;
+    font-family: inherit;
 }
 
 .footer button:hover {
-  background: lightyellow;
+    background: lightyellow;
 }
 
 .footer button:active {
-  background: darkgray;
-  color: black;
+    background: darkgray;
+    color: black;
 }

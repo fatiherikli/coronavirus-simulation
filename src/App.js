@@ -11,8 +11,10 @@ import { nextSimulationTick, getInitialGraph } from "./simulation";
 const INITIAL_SIMULATION_STATE = {
   tick: 0,
   agentsPerHouse: 9,
-  houses: 42,
-  initialSickAgents: 4,
+  houses: 48,
+  initialSickAgents: 1,
+  closedBorders: 2,
+  maskWearPercentage: 0
 };
 
 // Setup initial graph containing venues and agents
@@ -131,12 +133,13 @@ function App() {
           <div className={styles.population}>
             POPULATION: {nodes.filter(({ type }) => type === "agent").length}{" "}
             <br />
-            DEAD: {nodes.filter(({ state }) => state === DEAD).length} <br />
-            RECOVERED: {
+            <span className={styles.deceased}>Dead</span>: {nodes.filter(({ state }) => state === DEAD).length} <br />
+            
+            <span className={styles.recovered}>Recovered</span>: {
               nodes.filter(({ state }) => state === RECOVERED).length
             }{" "}
             <br />
-            SICK: {nodes.filter(({ state }) => state === SICK).length} <br />
+            <span className={styles.sick}>Sick</span>: {nodes.filter(({ state }) => state === SICK).length} <br />
           </div>
           <LineChart
             width={300}
@@ -204,9 +207,9 @@ function App() {
             simulations.
           </p>
           <p>
-            Created by:<br />
-            <a href="https://twitter.com/fthrkl">Fatih Erikli</a>'s <br/>
-            <a href="https://twitter.com/michel_mke">Michel Make</a><br/>
+            Created by<br />
+            <a href="https://twitter.com/fthrkl">Fatih Erikli</a><br />
+            <a href="https://twitter.com/michel_mke">Michel Make</a><br />
             <a href="https://twitter.com/rscircus">Roland Siegbert</a>
           </p>
           <p style={{ marginBottom: "4em" }}>

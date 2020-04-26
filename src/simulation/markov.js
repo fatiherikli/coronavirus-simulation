@@ -43,6 +43,7 @@ const DISEASE_SPREAD_TRANSITION = {
 export function getNextMarkovStateForAgent(agent, transitionMap) {
   const [agentLocation] = agent.location.split('-');
 
+  // TODO: traveliness will be implemented here
   if (agentLocation === 'house' && Math.random() < 0.9) {
     return STAY;
   }
