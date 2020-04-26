@@ -11,7 +11,7 @@ import { nextSimulationTick, getInitialGraph } from "./simulation";
 const INITIAL_SIMULATION_STATE = {
   tick: 0,
   agentsPerHouse: 9,
-  houses: 42,
+  houses: 48,
   initialSickAgents: 1,
 };
 
