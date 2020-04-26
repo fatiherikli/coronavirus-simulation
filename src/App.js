@@ -162,7 +162,7 @@ function App() {
             onRestartButtonClick={onRestartButtonClick}
           />
         </div>
-        
+
       </div>
       <div className={styles.pageInfo}>
       <ins
@@ -179,32 +179,31 @@ function App() {
             Imagine you are ruling over the European Union and can also influence how a sickness like COVID-19 behaves in a population like the European Union. What would you do if you were chief of the EU? Would you lock it down? Would you set out laws to make people wear masks? Explore your ability to manage the EU by changing the sliders above and watch how the sickness spreads over time. 😊
           </p>
           <p>
-            This is a direct result of the euvsvirus.org Hackathon 2020 based on this whitepaper: <a href="https://devpost.com/software/political-policies-effect-on-covid-19-spread-inside-the-eu-uamhdv">Political policies effect on COVID-19 spread inside the EU</a>
+            This simulator is a direct result of the <a href="https://euvsvirus.org/">EUvsVirus</a> Hackathon 2020 based on this whitepaper: <a href="https://devpost.com/software/political-policies-effect-on-covid-19-spread-inside-the-eu-uamhdv">Political policies effect on COVID-19 spread inside the EU</a>.
           </p>
           <h1>How does it work?</h1>
           <p>
-            Every citizen starts with the `SUSCEPTIBLE` state in the simulation, because almost everybody can get sick if she or he has contact with a `SICK` citizen. However, there are some people who are immune or resistant by nature.
-            Some of the citizen are in the `SICK` state at the very beginning, because they were abroad. Over the time, sick citizen spread the virus to the
-            rest of the population and the other citizen get sick as well based on the "basic reproduction number". After the infection, the now `SICK` citizen switch into a recovered or a dead state based on some probabilistic values.
+            This simulator models the spread of COVID-19 amongst the inhabitants of Europe. At the beginning of each simulation, all but a few inhabitants are healthy. The number of inhabitants that are sick at the start of the simulation can be set by adjusting the corresponding slider.
           </p>
           <p>
-            In the model, we have four different states of each EU citizen. The first state is
-            <i> SUSCEPTIBLE</i>, second one is <i> SICK</i>, and the last one is
-            <i> RECOVERED</i>. We have also a <i> DEAD</i> state in this
-            simulation, because unfortunately some people die because of COVID-19.
+            Once the simulation starts, inhabitants will begin to travel around. While visiting other countries, the healthy inhabitants might get in contact with sick inhabitants and, as a result, risk getting infected with the virus. Once back home, an infected inhabitant might also infect its countries fellow inhabitants.
           </p>
           <p>
-            The probabilistic values are defined in a Markov-chain concept called Markov graph. Markov chain is a stochastic model to describe a sequence of possible events that can occur in the future.
+            As in the real world, once infected, an inhabitant's future can develop in two ways. The first and most bright outcome is recovery from the virus 🥳. The second, obviously unwanted outcome, is death 😢.
           </p>
           <p>
-            We're using a Markov graph to define a probabilistic transition. We
-            can simply say that markov chain is a graph of all the possible
-            state transitions of an individual node.
+            Whether an inhabitant gets sick or if an infected inhabitant recovers or dies is based on probabilistic values.
+          </p>
+          <p>
+            The probabilistic values are defined in a so-called <a href="https://en.wikipedia.org/wiki/Markov_chain">Markov-chain</a>. A Markov chain is a stochastic model to describe a sequence of possible events that can occur in the future.
+          </p>
+          <p>
+            We're using a Markov graph to define a probabilistic transition. We can simply say that Markov chain is a graph of all the possible state transitions of an individual inhabitant. In our model, we have events such as getting infected, recovering from the virus, or death.
           </p>
           <h1>I would like to discover more:</h1>
           <p>
             This is an MIT-licensed open-source project, you can find the source
-            code on github. Feel free to copy, use or modify it for your own
+            code on <a href="https://github.com/eusim/coronavirus-simulation">GitHub</a>. Feel free to copy, use or modify it for your own
             simulations.
           </p>
           <p>
