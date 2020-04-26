@@ -1,163 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Alice&display=swap');
 
 body {
-  font-family: Alice, serif;
-  font-size: 1em;
+    font-family: Alice, serif;
+    font-size: 1em;
 }
 
 .container {
-  /*width: 960px;*/
-  margin: auto;
+    /*width: 960px;*/
+    margin: auto;
 }
 
 .header {
-  padding: 3em 4em 2em;
-  /*width: 750px;*/
-  margin: auto;
-  z-index: 2;
-  border-bottom: 1px solid black;
-  padding-left: calc(50% - 370px);
+    padding: 3em 4em 2em;
+    /*width: 750px;*/
+    margin: auto;
+    z-index: 2;
+    border-bottom: 1px solid black;
+    padding-left: calc(50% - 370px);
 }
 
 .header h3 {
-  font-size: 2.3em;
-  margin: 0;
+    font-size: 2.3em;
+    margin: 0;
 }
 
 .header h2 {
-  margin: 0.2em 0 0;
-  color: gray;
-  font-weight: normal;
+    margin: 0.2em 0 0;
+    color: gray;
+    font-weight: normal;
 }
 
 .simulationContainer {
-  margin-top: -0.5em;
-  z-index: 0;
+    margin-top: -0.5em;
+    z-index: 0;
 }
 
 .simulation {
-  text-align: center;
-  border-bottom: 1px solid black;
+    text-align: center;
+    border-bottom: 1px solid black;
 }
 
 .simulation svg {
 }
 
 .section {
-  overflow: hidden;
-  width: 800px;
-  margin: auto;
-  padding: 0 0 0 2em;
+    overflow: hidden;
+    width: 800px;
+    margin: auto;
+    padding: 0 0 0 2em;
+}
+
+.section .recovered {
+    color: green;
+}
+
+.section .sick {
+    color: red;
+}
+
+.section .deceased {
+    color: black;
 }
 
 .simulationSettings {
-  float: left;
-  width: 50%;
+    float: left;
+    width: 50%;
 }
 
 .stats {
-  float: right;
-  width: 40%;
-  margin: 0 1em 0 0;
+    float: right;
+    width: 40%;
+    margin: 0 1em 0 0;
 }
 
 .population {
-  margin: 0 0 1em;
+    margin: 0 0 1em;
 }
 
 .simulationInfo {
-  color: gray;
-  margin: 1.5em 0 1em;
+    color: gray;
+    margin: 1.5em 0 1em;
 }
 
 .pageInfo {
-  margin-top: 3em;
-  border-top: 1px solid black;
-  padding: 2em 0;
-  font-size: 1.2em;
-  line-height: 1.3em;
+    margin-top: 3em;
+    border-top: 1px solid black;
+    padding: 2em 0;
+    font-size: 1.2em;
+    line-height: 1.3em;
 }
 
 .pageInfo h1 {
-  line-height: 1em;
+    line-height: 1em;
 }
 
 .pageInfo a {
-  color: #0fb5fc;
-  text-decoration: none;
+    color: #0fb5fc;
+    text-decoration: none;
 }
 
 .pageInfo a:hover {
-  color: black;
-  text-decoration: underline;
+    color: black;
+    text-decoration: underline;
 }
 
 pre {
-  background: #dedede;
-  padding: 1em;
+    background: #dedede;
+    padding: 1em;
 }
 
 .samples {
-
 }
 
 .samples span {
-  position: absolute;
-  margin-top: 1em;
+    position: absolute;
+    margin-top: 1em;
 }
 
 .samples span:before {
-  position: absolute;
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: gray;
-  border-radius: 50%;
-  margin-top: 0.25em;
-  margin-left: -18px;
+    position: absolute;
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: gray;
+    border-radius: 50%;
+    margin-top: 0.25em;
+    margin-left: -18px;
 }
 
 .samples .sampleSusceptible {
-  color: gray;
-  margin-left: -21.8em;
+    color: gray;
+    margin-left: -21.8em;
 }
 
 .samples .sampleSusceptible:before {
-  background: #e5dfdf;
+    background: #e5dfdf;
 }
 
 .samples .sampleInfected {
-  color: gray;
-  margin-left: -13.5em;
+    color: gray;
+    margin-left: -13.5em;
 }
 
 .samples .sampleInfected:before {
-  background: #ff677d;
+    background: #ff677d;
 }
 
 .samples .sampleRecovered {
-  margin-left: -7em;
-  color: gray;
+    margin-left: -7em;
+    color: gray;
 }
 
 .samples .sampleRecovered:before {
-  background: #75daad;
+    background: #75daad;
 }
 
 .samples .sampleDead {
-  margin-left: 0em;
-  color: gray;
+    margin-left: 0em;
+    color: gray;
 }
-.samples .sampleDead:before { 
-  content: "💀";
-  margin-top: -0.30em;
-  margin-right: 10px;
-  background: white;
+.samples .sampleDead:before {
+    content: '💀';
+    margin-top: -0.3em;
+    margin-right: 10px;
+    background: white;
 }
 
 .samples i {
-  position: absolute;
-  color: gray;
-  margin-top: 0.9em;
-  margin-left: 5.5em;
+    position: absolute;
+    color: gray;
+    margin-top: 0.9em;
+    margin-left: 5.5em;
 }

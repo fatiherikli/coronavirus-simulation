@@ -11,8 +11,8 @@ import { nextSimulationTick, getInitialGraph } from "./simulation";
 const INITIAL_SIMULATION_STATE = {
   tick: 0,
   agentsPerHouse: 9,
-  houses: 42,
-  initialSickAgents: 4,
+  houses: 48,
+  initialSickAgents: 1,
 };
 
 // Setup initial graph containing venues and agents
@@ -131,12 +131,13 @@ function App() {
           <div className={styles.population}>
             POPULATION: {nodes.filter(({ type }) => type === "agent").length}{" "}
             <br />
-            DEAD: {nodes.filter(({ state }) => state === DEAD).length} <br />
-            RECOVERED: {
+            <span className={styles.deceased}>Dead</span>: {nodes.filter(({ state }) => state === DEAD).length} <br />
+            
+            <span className={styles.recovered}>Recovered</span>: {
               nodes.filter(({ state }) => state === RECOVERED).length
             }{" "}
             <br />
-            SICK: {nodes.filter(({ state }) => state === SICK).length} <br />
+            <span className={styles.sick}>Sick</span>: {nodes.filter(({ state }) => state === SICK).length} <br />
           </div>
           <LineChart
             width={300}
