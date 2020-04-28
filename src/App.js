@@ -101,7 +101,7 @@ function App() {
     <div className={styles.container}>
       <div className={styles.header}>
         <h3>What happens in Europe if we ... ?</h3>
-        <h2>An experiment to analyse how a virus spreads over Europe</h2>
+        <h2>An experiment to analyse how an aerosol droplet virus spreads over Europe</h2>
       </div>
       <div className={styles.simulation}>
         <div className={styles.samples}>
@@ -206,11 +206,13 @@ function App() {
             code on <a href="https://github.com/eusim/coronavirus-simulation">GitHub</a>. Feel free to copy, use or modify it for your own
             simulations.
           </p>
+          <h1>How to understand more of this:</h1>
+          <p>
+            An explanation and all assumptions will be coverd in a blog post soon. We needed to get some sleep first. 😊 For the super curious <a href="https://github.com/computational-medicine/BMED360-2020/blob/6d71a390c7f51f0b427bfe9f33ee503be7634fb8/outbreak-science/README_outbr_sci.md"> github.com/computational-medicine/BMED360-2020 </a> is a tremendous resource.
+          </p>
           <p>
             Created by<br />
-            <a href="https://twitter.com/fthrkl">Fatih Erikli</a><br />
-            <a href="https://twitter.com/michel_mke">Michel Make</a><br />
-            <a href="https://twitter.com/rscircus">Roland Siegbert</a>
+            ~ <a href="https://twitter.com/rscircus">Roland Siegbert</a>, <a href="https://twitter.com/michel_mke">Michel Make</a> and with special thanks to <a href="https://twitter.com/fthrkl">Fatih Erikli</a>.
           </p>
           <p style={{ marginBottom: "4em" }}>
             Stay safe! <br />{" "}
