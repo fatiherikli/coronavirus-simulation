@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/coronavirus-simulation/static/css/main.24ccaaa2.chunk.css",
+    "main.js": "/coronavirus-simulation/static/js/main.3aefa153.chunk.js",
+    "main.js.map": "/coronavirus-simulation/static/js/main.3aefa153.chunk.js.map",
+    "runtime-main.js": "/coronavirus-simulation/static/js/runtime-main.43b6624d.js",
+    "runtime-main.js.map": "/coronavirus-simulation/static/js/runtime-main.43b6624d.js.map",
+    "static/js/2.2695d89b.chunk.js": "/coronavirus-simulation/static/js/2.2695d89b.chunk.js",
+    "static/js/2.2695d89b.chunk.js.map": "/coronavirus-simulation/static/js/2.2695d89b.chunk.js.map",
+    "index.html": "/coronavirus-simulation/index.html",
+    "precache-manifest.fbfa09858cacbd5287d7ad19c14a280b.js": "/coronavirus-simulation/precache-manifest.fbfa09858cacbd5287d7ad19c14a280b.js",
+    "service-worker.js": "/coronavirus-simulation/service-worker.js",
+    "static/css/main.24ccaaa2.chunk.css.map": "/coronavirus-simulation/static/css/main.24ccaaa2.chunk.css.map",
+    "static/js/2.2695d89b.chunk.js.LICENSE.txt": "/coronavirus-simulation/static/js/2.2695d89b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.43b6624d.js",
+    "static/js/2.2695d89b.chunk.js",
+    "static/css/main.24ccaaa2.chunk.css",
+    "static/js/main.3aefa153.chunk.js"
+  ]
+}

@@ -162,6 +162,14 @@ function App() {
         
       </div>
       <div className={styles.pageInfo}>
+<ins
+          className="adsbygoogle"
+          style={{ display: 'block', textAlign: 'center' }}
+          data-ad-layout="in-article"
+          data-ad-format="fluid"
+          data-ad-client="ca-pub-5587173855104127"
+          data-ad-slot="8487596319"
+        ></ins>
         <div className={styles.section}>
           <h1>What is this?</h1>
           <p>
