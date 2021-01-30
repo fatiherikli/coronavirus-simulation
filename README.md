@@ -15,3 +15,5 @@ The demo page:
 Basically you need to wash your hands very often in order to avoid such little inconvenients in your life.
 
 😗
+
+The simulation starts with NO SICK person.
