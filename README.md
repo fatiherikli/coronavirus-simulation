@@ -4,6 +4,9 @@ The demo and the article can be found:
 
 The page might contain ads. So be sure that you're browsing safely.
 
-An article: towardsdatascience.com/infectious-disease-modelling-beyond-the-basic-sir-model-216369c584c4
+An article: https://
+            towardsdatascience.com
+            /infectious-disease-modelling-beyond-the-basic-sir-model
+            -216369c584c4
 
 ![no-deaths-as-png](https://github.com/fatiherikli/coronavirus-simulation/raw/master/no-deaths.png)
