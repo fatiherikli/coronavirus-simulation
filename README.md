@@ -12,12 +12,6 @@ The demo page:
 
 <https://fatiherikli.github.io/coronavirus-simulation>
 
-Also be sure that you are not trusting any person around claiming that they found a vaccine or something.
-
 Basically you need to wash your hands very often in order to avoid such little inconvenients in your life.
 
 😗
-
-vaccine does not fix the situation if you don't wash your hands. 
-
-the experiment shows that the viruses are much more clever than you think.
