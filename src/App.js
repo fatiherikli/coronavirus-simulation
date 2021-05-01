@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-
 import styles from "./App.module.css";
 import Graph from "./Graph";
 import LineChart from "./LineChart";
