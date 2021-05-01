@@ -16,7 +16,7 @@ const INITIAL_SIMULATION_STATE = {
   hospitals: 1,
   supermarkets: 3,
   temples: 1,
-  initialSickAgents: 0,
+  initialSickAgents: 1,
 };
 
 const INITIAL_GRAPH = getInitialGraph(INITIAL_SIMULATION_STATE);
